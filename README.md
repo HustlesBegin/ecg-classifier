@@ -23,20 +23,20 @@ UART transmission through a CP2102 USB-to-serial adapter
     v
 Python application
     |-- Raw ECG waveform ----------------------------------|
-    |                                                     |
-    v                                                     |
-Band-pass filtering                                       |
-    |                                                     |
-    v                                                     |
+    |                                                      |
+    v                                                      |
+Band-pass filtering                                        |
+    |                                                      |
+    v                                                      |
 R-peak detection and heartbeat segmentation                |
-    |                                                     |
-    v                                                     |
-Feature extraction and scaling                            |
-    |                                                     |
-    v                                                     |
+    |                                                      |
+    v                                                      |
+Feature extraction and scaling                             |
+    |                                                      |
+    v                                                      |
 Random Forest classification and heart rate estimation     |
-    |                                                     |
-    v                                                     v
+    |                                                      |
+    v                                                      v
 Local web page: waveform, heartbeat classification, and BPM
 ```
 
