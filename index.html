@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Monitor ECG Local</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">ECG AD8232 + ESP32</p>
+          <h1>Monitor local de ritmo cardiaco</h1>
+        </div>
+        <div class="controls">
+          <select id="portSelect" aria-label="Puerto serial"></select>
+          <button id="refreshBtn" type="button">Actualizar puertos</button>
+          <button id="startBtn" type="button">Iniciar</button>
+          <button id="stopBtn" type="button">Detener</button>
+        </div>
+      </section>
+
+      <section class="status-grid">
+        <article class="metric">
+          <span>Conexion</span>
+          <strong id="connectionStatus">Desconectado</strong>
+        </article>
+        <article class="metric">
+          <span>Electrodos</span>
+          <strong id="leadStatus">Sin datos</strong>
+        </article>
+        <article class="metric">
+          <span>BPM</span>
+          <strong id="bpmValue">--</strong>
+        </article>
+        <article class="metric">
+          <span>Modelo RF</span>
+          <strong id="modelLabel">Calculando</strong>
+        </article>
+        <article class="metric">
+          <span>Frecuencia</span>
+          <strong id="rateLabel">Calculando</strong>
+        </article>
+      </section>
+
+      <section class="chart-panel">
+        <canvas id="ecgCanvas" width="1200" height="420" aria-label="Grafica ECG"></canvas>
+      </section>
+
+      <p id="message" class="message">Selecciona el puerto COM del ESP32 y presiona Iniciar.</p>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

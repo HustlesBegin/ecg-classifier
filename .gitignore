@@ -1,0 +1,35 @@
+# Entornos y cachés de Python
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.runtime_tmp/
+
+# Configuración privada
+.env
+.env.*
+!.env.example
+
+# Archivos temporales y del sistema
+*.log
+*.tmp
+Thumbs.db
+.DS_Store
+
+# Resultados de compilación y ajustes locales de MPLAB
+build/
+dist/
+nbproject/private/
+*.o
+*.obj
+*.elf
+*.map
+*.lst
+
+# Artefactos generados al entrenar el modelo en proyecto.ipynb
+ecg_rf_model.pkl
+ecg_scaler.pkl
+ecg_feature_names.npy

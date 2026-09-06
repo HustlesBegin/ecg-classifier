@@ -1,0 +1,171 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7f8;
+  color: #182024;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.page {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 36px;
+}
+
+.topbar {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: #4b626b;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.15;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+select,
+button {
+  min-height: 38px;
+  border: 1px solid #a9b6bb;
+  border-radius: 6px;
+  background: #fff;
+  color: #182024;
+  padding: 0 12px;
+  font-size: 14px;
+}
+
+button {
+  cursor: pointer;
+  background: #176b87;
+  border-color: #176b87;
+  color: #fff;
+}
+
+button:hover {
+  background: #12566d;
+}
+
+#stopBtn {
+  background: #8c2f39;
+  border-color: #8c2f39;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(130px, 1fr));
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.metric {
+  background: #fff;
+  border: 1px solid #d8e0e3;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.metric span {
+  display: block;
+  margin-bottom: 8px;
+  color: #5b6f76;
+  font-size: 13px;
+}
+
+.metric strong {
+  display: block;
+  min-height: 26px;
+  font-size: 23px;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+.chart-panel {
+  background: #ffffff;
+  border: 1px solid #d8e0e3;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: min(420px, 54vh);
+}
+
+.message {
+  min-height: 24px;
+  margin: 14px 0 0;
+  color: #4b626b;
+}
+
+.ok {
+  color: #1f7a3f;
+}
+
+.warn {
+  color: #a35b00;
+}
+
+.bad {
+  color: #a0202d;
+}
+
+@media (max-width: 850px) {
+  .topbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .controls {
+    justify-content: flex-start;
+  }
+
+  .status-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    width: min(100% - 20px, 1180px);
+    padding-top: 18px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  select,
+  button {
+    width: 100%;
+  }
+
+  .status-grid {
+    grid-template-columns: 1fr;
+  }
+}
